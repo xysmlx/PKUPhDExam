@@ -1,0 +1,122 @@
+\RequirePackage{float}
+\RequirePackage{subfigure}
+\RequirePackage{longtable}
+\RequirePackage{booktabs}
+\RequirePackage{graphicx}
+\RequirePackage{url}
+\RequirePackage{amsthm}
+\RequirePackage{xcolor}
+\RequirePackage{amsmath,amssymb,latexsym}
+\RequirePackage{multirow}
+\RequirePackage{tabularx}
+\RequirePackage{epstopdf}
+\RequirePackage{verbatim}
+%\RequirePackage[linesnumbered,ruled,figure]{algorithm2e}
+%\RequirePackage{algorithm}
+%\RequirePackage{algorithmicx}
+%\RequirePackage{algpseudocode}
+\RequirePackage{times}
+\RequirePackage{multirow}
+\RequirePackage{listings}
+\RequirePackage{pdfpages}
+\RequirePackage{indentfirst}
+
+\RequirePackage{geometry}
+\geometry{left=1.25in,right=1.25in,top=1in,bottom=1in}
+\setlength{\headheight}{0.7 in}
+
+
+\RequirePackage[CJKnumber]{xeCJK}
+\setCJKmainfont[BoldFont=SimHei]{SimSun}
+\setCJKmonofont{SimSun}
+\setmainfont{Times New Roman}
+
+\setCJKfamilyfont{kaiti}{KatTi}
+\newcommand{\kaiti}{\CJKfamily{kaiti}}
+
+\RequirePackage{CJKnumb}
+
+\renewcommand{\baselinestretch}{1.25}\normalsize
+
+\RequirePackage{titlesec}
+\newpagestyle{main}{            
+    \sethead{\includegraphics[width=0.74 in,height=0.49 in]{resources/header.jpg}{\fontsize{9pt}{\baselineskip}\hspace{2em}北京大学信息科学技术学院 • 网络与信息系统研究所}}{}{}     %设置页眉
+    \setfoot{}{}{}      %设置页脚，可以在页脚添加 \thepage  显示页数
+    \headrule                                      % 添加页眉的下划线
+%    \footrule                                       %添加页脚的下划线
+}
+\pagestyle{main}    %使用该style
+
+\titleformat{\section}{\fontsize{14pt}{\baselineskip}\bfseries}{\CJKnumber{\thesection}、}{0em}{}
+\titlespacing*{\section}{0 cm}{*4}{*1.5}
+\titleformat{\subsection}{\fontsize{12pt}{\baselineskip}\bfseries}{\thesubsection}{0.5em}{}
+\titlespacing*{\subsection}{0 cm}{*2}{*1.5}
+
+
+\newcommand{\cntitle}{中文标题}
+\newcommand{\entitle}{English Title}
+\newcommand{\cnauthor}{作者}
+\newcommand{\enauthor}{author}
+\newcommand{\cnaddress}{中文地址}
+\newcommand{\enaddress}{English Address}
+\newcommand{\studentid}{0000000000}
+\newcommand{\departmentname}{信息科学技术学院}
+\newcommand{\majorname}{计算机系统结构}
+\newcommand{\researchname}{研究方向}
+\newcommand{\advisorname}{导师姓名}
+\newcommand{\yearname}{二〇一八}
+
+\newenvironment{cnabstract}{
+{\begin{center}\fontsize{22 pt}{\baselineskip}\bfseries\cntitle{}\end{center}}
+{\begin{center}\fontsize{10.5 pt}{\baselineskip}\cnauthor{}\end{center}}\vspace{-0.65cm}
+{\begin{center}\fontsize{10.5 pt}{\baselineskip}（\cnaddress{}）\end{center}}
+\noindent\textbf{摘要：}
+}{}
+
+\newenvironment{cnkeywords}{
+\noindent\textbf{关键词：}
+}{}
+
+
+\newenvironment{enabstract}{
+{\begin{center}\fontsize{18 pt}{\baselineskip}\bfseries\entitle{}\end{center}}
+{\begin{center}\fontsize{10.5 pt}{\baselineskip}\enauthor{}\end{center}}\vspace{-0.65cm}
+{\begin{center}\fontsize{10.5 pt}{\baselineskip}(\enaddress{})\end{center}}
+\noindent\textbf{Abstract:}
+}{}
+
+\newenvironment{enkeywords}{
+\noindent\textbf{Key words:}
+}{}
+
+
+\newcommand{\pagecover}{
+\thispagestyle{empty}
+\begin{center}
+\includegraphics[width=0.83 in,height=0.83 in]{resources/pkulogo.png}\hspace{1.3cm}
+\includegraphics[width=3.03 in,height=0.96 in]{resources/pkuname.jpg}
+\end{center}
+\vspace{0.8cm}
+{\begin{center}\fontsize{36 pt}{\baselineskip}\bfseries 博士研究生综合考试报告\end{center}}
+\vspace{0.8cm}
+{\begin{center}\fontsize{22 pt}{\baselineskip}题目：\bfseries \underline{\makebox[0.5\textwidth]{\cntitle{}}} \end{center}}
+\vspace{6cm}
+{\begin{center}\fontsize{16 pt}{\baselineskip}姓\hspace{3.2 em}名：\underline{\makebox[0.5\textwidth]{\cnauthor{}}} \end{center}}
+{\begin{center}\fontsize{16 pt}{\baselineskip}学\hspace{3.2 em}号：\underline{\makebox[0.5\textwidth]{\studentid{}}} \end{center}}
+{\begin{center}\fontsize{16 pt}{\baselineskip}院\hspace{3.2 em}系：\underline{\makebox[0.5\textwidth]{\departmentname{}}} \end{center}}
+{\begin{center}\fontsize{16 pt}{\baselineskip}专\hspace{3.2 em}业：\underline{\makebox[0.5\textwidth]{\majorname{}}} \end{center}}
+{\begin{center}\fontsize{16 pt}{\baselineskip}研究方向：\underline{\makebox[0.5\textwidth]{\researchname{}}} \end{center}}
+{\begin{center}\fontsize{16 pt}{\baselineskip}导师姓名：\underline{\makebox[0.5\textwidth]{\advisorname{}}} \end{center}}
+\vspace{1cm}
+{\begin{center}\fontsize{18 pt}{\baselineskip}\yearname{}\hspace{0.5em}年\hspace{0.5em}\CJKnumber{\month}\hspace{0.5em}月 \end{center}}
+\newpage
+}
+
+\renewcommand\figurename{图}
+\renewcommand\tablename{表}
+\renewcommand\refname{\fontsize{14 pt}{\baselineskip}\bfseries 参考文献}
+
+
+\newcommand{\TODO}[1]{{\color{red} {\bf #1}}}
+
+\newcommand{\para}[1]{{\vspace{2pt} \bf \noindent #1 \hspace{1pt}}}
