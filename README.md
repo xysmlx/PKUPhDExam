@@ -17,6 +17,6 @@
 ## FAQ
 
 1. how to support long title?
-  * Edit the parameter ```\makebox[0.5\textwidth]``` in line 105 ```{\begin{center}\fontsize{22 pt}{\baselineskip}题目：\bfseries \underline{\makebox[0.5\textwidth]{\cntitle{}}} \end{center}}``` of the pkuphdexam.sty file.
+    * Edit the parameter ```\makebox[0.5\textwidth]``` in line 105 ```{\begin{center}\fontsize{22 pt}{\baselineskip}题目：\bfseries \underline{\makebox[0.5\textwidth]{\cntitle{}}} \end{center}}``` of the pkuphdexam.sty file.
 2. font not found?
-  * Install required fonts: SimSun, SimHei, Times New Roman, KaiTi
+    * Install required fonts: SimSun, SimHei, Times New Roman, KaiTi
